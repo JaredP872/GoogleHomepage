@@ -1,0 +1,251 @@
+/* Below is the import link in order to pull the google font for the logo from the website google fonts.  */
+
+@import url('https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+
+body {
+    margin: 0;
+    font-family: ariel, sans-serif;
+    font-size: 0.9em;
+}
+
+a {
+    margin: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+
+
+/* Below is a css Pseudo-class which is giving our anchor tag a hover effect 
+Pseudo class def: A pseudo-class is a keyword that specifies a special state of an element and is added to a selector. Syntax: To use a pseudo-class, add a colon (:) after a selector, followed by the pseudo-class keyword. For example, a:hover.*/
+a:hover {
+    text-decoration: underline;
+}
+
+/* Below we are using flexbox. 
+What flex does: Flex makes a flex container that expands its items to fill available free space or shrinks them to prevent overflow.   */
+
+/* We are also using justify content space bewteen. 
+what does justify content do? The justify-content property controls how space is distributed between and around content items along the main axis of a flex container.
+what does space between do? Space between items are evenely distributed in their containers. */
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* you can align-items  and justify content with display flex.
+what does align items do? the align-items property controls the alignment of items on the cross axis in a flexbox or grid container.
+what does justify-content do? The justify-content property controls how space is distributed between and around content items along the main axis of a flex container. */
+.header-nav {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    margin-right: 10px;
+}
+
+/* Below is a child combinator selector which looks like this: >. Its used to select an element with a specific parent. Ex. ul > a selects all anchor tags direcly within a ul tag.  */
+/* Below is also sellecting any img directly inside of a ul(unordered list) element  */
+ul > a, ul > img {
+    padding: 0 8px;
+}
+
+/* Below we are using another psuedo class which again is a keyword that allows us to place an effect on a selector. The selector is. */
+
+/* Below we also have the box-shadow property. What it does: The box-shadow property enables you to cast a drop shadow from the frame of almost any element.
+
+There are 5 arguments which go in order of: box-shadow: 0 0 0 0 color; these placements do different things such as: for the 1st argument changes the (horizontal offset), for the 2nd one changes the (verticle offset), The 3rd changes the (Blur radius) and the 4th changes the (size of the shadow). 5 being the color of the shadow casted. 
+
+Offset def: The offset-position property is part of a motion system based on offset constituent properties, including offset-anchor, offset-distance, and offset-path. These properties work together to create various motion effects along a path.
+*/
+.search-bar-imgs {
+width: 26px;
+height: 26px;
+}
+
+.header-img:hover {
+     box-shadow: 0px 0px 10px 0 gainsboro; /* change back to gainsboro for the color  */
+     border-radius: 30px;
+     padding: 3px;
+    cursor: pointer;
+}
+
+/* Below We are using flex direction column in order to keep the button side by side. if we didn't use flex-direction: column; then the html will automaticaly use a row format. */
+
+/* we also use align-items: center; in order to hold all of our elements in our <section> parent element in the middle of the page. */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Vh stands for View hight and currently we made it equal to 5 which is basically 5% of the browser window we have our code open in */
+    margin-top: 10vh;
+}
+
+/* @font-face is specifies a custom font The font can be loaded from either a remote server or a locally-installed font on your computer. */
+
+
+/* Below we have the font size 5.5em. Bu what does 5.5em mean? 5.5 em means 5.5 times what the element would be by normal.  */
+h1 {
+    font-size: 5.5em;
+     font-family: "Georama";
+     font-weight: 500;
+     font-style: normal;
+      
+}
+
+/* Below we have Justify-content: space-between;, and what that does is it evens out all the elements in the my-input-container class out */
+.my-input-container {
+    display: flex;
+    justify-content: space-around;
+    /* when we used width: 600; the imgs expanded but the input didn't. Remeber the input element is only the input inside the div. The div is whats housing all the elements. Which means the div is what will expand in this case  */
+    width: 600px;
+    height: 38px;
+    border: 1px solid gainsboro;
+    border-radius: 20px;
+}
+
+/* Flex-grow specifies how much the item will grow relative to the rest of the flexible items inside the same container  */
+
+/* The border property below selects the border of the input element and hides it using the none value. */
+
+/* the (.input-container > input) is selecting the input inside of the input container instead of all the items such as the two imgs beside it. We do this with the > as it specifies the element we are trying to edit.  */
+
+/* (outline: none;) will hide the outline of the input element once you click on it.  */
+.my-input-container > input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+}
+
+.my-input-container > img {
+    height: 38px;
+    background-color: white;
+    background-blend-mode: soft-light;
+    margin: 0 10px;
+    border-radius: 50px;
+}
+
+.my-input-container :hover {
+    box-shadow: 0 0 10px 0 gainsboro;
+}
+
+/* The css decliration below changes our cursor to a pointer whenever we hover over an img by using the psuedo selector hover.  */
+img:hover {
+    cursor: pointer;
+}
+
+.my-button-container {
+    padding-top: 53px;
+}
+
+button {
+    background-color: #F8F9FA;
+    border-radius: 5px;
+    border: none;
+    height: 36px;
+    padding: 0 20px;
+    margin: 0 4px;
+}
+
+button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px gainsboro;
+}
+
+
+/*We will use position fixed on the footer. But what does position fixed actualy do?
+ Position fixed makes it so that whatever element it's applied to will stay in the same place even if the page is scrolled. */
+
+ /* once we use bottom: 0; it will place the footer to where there's zero space between the bottom of the page  */
+
+ /* 100vw makes it so that the footer is 100% the width of the users browser.  */
+footer {
+    background-color: #F2F2F2;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+}
+
+/* The justify-self property aligns a grid item within its grid cell in the inline direction. For pages in English, inline direction is left to right and block direction is downward. Sinse I used justify-self: start;  the footer-left content will be at the beginging of the footer.*/
+#footer-left {
+display: flex;
+justify-self: start;
+padding-left: 20px;
+align-items: center;
+}
+
+#footer-center {
+    display: flex;
+    justify-content: center;
+    margin-right: 110px;
+    align-items: center;
+}
+
+.leaf-img {
+    height: 25px;
+    width: 25px;
+    margin: 0;
+    padding: 0;
+    
+}
+
+#footer-right {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+    align-items: center;
+}
+
+/* Below we use a media query in order to change the footer navigation links to column instead of row so that they stack on top of eachother when the max width is 630px or less. */
+@media (max-width: 630px) {
+    #footer-nav {
+        flex-direction: column;
+    }
+    /* for the footers justify-contenet: center; below, whenever the screen reaches the width of 630px or below the footer links will center themselves. */
+    #footer-left {
+        justify-content: center;
+    }
+
+    #footer-left {
+        justify-content: center;
+    }
+
+/* Below we use a media query in order to change the my-input-container to width: 95vw; so that the input container is 95% of the view window whenever the max width is 630px or less. */
+    .my-input-container {
+        width: 95vw;
+    }
+}
+
+/* For the media query below what will happen is whenever the height is 522px or lower whatever is in the brackets will occur. */
+@media (max-height: 522px) {
+
+    /* The overlow propert controls what happens to the contenet taht is too big to fit ito its container. In this case sense we set it to hidden the overflow wont be shown.  */
+
+    /* As for overflow-x the x stands for the horizontal direction. By default the webpage would show a scroll bar for us to scroll to the other content on the page but sinse we used overflow-x: hidden; it will hide that scroll bar */
+body {
+    overflow-x:hidden;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+footer {
+    position: relative;
+}
+}
+
+@media (max-height: 570px) and (max-width: 630px) {
+
+    body {
+        overflow-x: hidden;
+    }
+    section {
+        margin-bottom: 13px;
+    }
+
+    footer {
+        position: relative;
+    }
+}

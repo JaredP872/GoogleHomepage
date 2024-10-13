@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google</title>
+    <!-- Below is the link that I made for the Google Icon. I used a Google icon Img and shortened the URL by downloading it to my computer and pasting it into my code file -->
+    <link rel="icon" href="G.png" />
+    <link rel="stylesheet" href="Google.css" />
+  </head>
+  <body>
+    <!-- Below is the header element and within it contains the nav element in order to hold our Links such as About, Store, Gmail and images. This is all in a unordered list element and anchor tags which creates the links -->
+    <header>
+      <nav>
+        <ul class="header-nav">
+          <a
+            href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header"
+            >About</a
+          >
+          <a
+            href="https://store.google.com/US/?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US"
+            >Store</a
+          >
+        </ul>
+        <ul class="header-nav">
+          <a href="https://www.google.com/intl/en-US/gmail/about/">Gmail</a>
+          <a href="https://www.google.com/imghp?hl=en&ogbl">Images</a>
+          <a href="https://www.google.com/intl/en/about/products"
+            ><img
+              style="height: 26px; width: 26px"
+              class="header-img"
+              src="apps-logo-1.png"
+              alt="Google-apps"
+          /></a>
+
+          <a
+            href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fwww.google.com%2Fwebhp%3Fhl%3Den%26sa%3DX%26ved%3D0ahUKEwilsLbe9feIAxVI78kDHX5sH1gQPAgI&ec=GAZAmgQ&hl=en&ifkv=ARpgrqdq7hJ9lgBb0GBRiUKlst4o1Man-e4E5Fhn50khcihM7v9k_H_TDps32ewITL_divlCAZfCyA&passive=true&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S2016394608%3A1728162585936947&ddm=0"
+            ><img
+              style="height: 50px; width: 100px; border-radius: 30px"
+              class="header-img"
+              src="Sign-in.png"
+              alt="profile-pic"
+          /></a>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <img src="Google1.png" alt="Google-Img" />
+      <!-- The div below will be used as the container for my mic img, input contyainer and my eye glass img. -->
+      <div class="my-input-container">
+        <img
+          onclick="captureMsg()"
+          class="search-bar-imgs"
+          src="Google-search.png"
+          alt="Magnifying-glass"
+        />
+
+        <input
+          type="text"
+          name="search-bar"
+          placeholder="Search Google or type a URL"
+          id="input-search"
+        />
+        <img class="search-bar-imgs" src="Google-mic.png" alt="microphone" />
+        <img class="search-bar-imgs" src="Google-camera.png" alt="Camera" />
+      </div>
+      <div class="my-button-container">
+        <button onclick="captureMsg()">Google search</button>
+        <button>I'm Feeling Lucky</button>
+      </div>
+    </section>
+
+    <footer>
+      <nav id="footer-nav">
+        <!-- The HTML id attribute is used to specify a unique id for an HTML element. In this case the id attributre is used on the first and second unordered list. With the id name footer-left and footer-right inside of the nav element which is also inside of its parenet element footer. This is how we make both the unordered list appear seperate as well as call on them both seperatley to move them on opposite sides of the footer.-->
+        <ul id="footer-left">
+          <a
+            href="https://ads.google.com/intl/en_us/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1"
+            >Advertising</a
+          >
+          <a
+            href="sustainability.google/?utm_source=googlehpfooter&utm_medium=housepromos&utm_campaign=bottom-footer&utm_content="
+            >Business</a
+          >
+          <a href="https://www.google.com/search/howsearchworks/?fg=1"
+            >How Search Works</a
+          >
+        </ul>
+        <ul id="footer-center">
+          <img class="leaf-img" src="leaf.png" alt="leaf-img" />
+          <a
+            style="font-size: 14px; margin: 0; padding: 0"
+            href="https://sustainability.google/?utm_source=googlehpfooter&utm_medium=housepromos&utm_campaign=bottom-footer&utm_content="
+            >Our third decade of climate action: join us</a
+          >
+        </ul>
+        <ul id="footer-right">
+          <a href="https://policies.google.com/privacy?hl=en&fg=1">Privacy</a>
+          <a href="https://policies.google.com/terms?hl=en&fg=1">Terms</a>
+          <a
+            href="https://www.google.com/webhp?hl=en&sa=X&ved=0ahUKEwilsLbe9feIAxVI78kDHX5sH1gQPAgI#:~:text=Terms-,Settings,-Search%20settings"
+            >Settings</a
+          >
+        </ul>
+      </nav>
+    </footer>
+
+    <script>
+      function captureMsg() {
+        // stores the information the user puts in the search bar.
+        const msg = document.getElementById("input-search").value;
+        alert(msg);
+      }
+    </script>
+  </body>
+</html>
